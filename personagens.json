@@ -4,41 +4,41 @@
         "aniversario": "1 de Novembro",
         "descricao": "Uma gata branca com um laço vermelho, conhecida por sua gentileza e amizade.",
         "imagem": "https://s3.amazonaws.com/blog.dentrodahistoria.com.br/wp-content/uploads/2025/08/18180439/HK.png",
-        "link": "https://www.sanrio.com.br/hello-kitty"
+        "link": "https://www.sanrio.com.br/"
     },
     {
         "nome": "My Melody",
         "aniversario": "18 de Janeiro",
         "descricao": "Uma coelhinha honesta e de boa índole que usa um capuz rosa. Adora bolo de amêndoas.",
         "imagem": "https://s3.amazonaws.com/blog.dentrodahistoria.com.br/wp-content/uploads/2025/08/18180540/MyMelody.png",
-        "link": "https://www.sanrio.com.br/my-melody"
+        "link": "https://www.sanrio.com.br/"
     },
     {
         "nome": "Kuromi",
         "aniversario": "31 de Outubro",
         "descricao": "A rival de My Melody, com aparência punk-rock, mas que secretamente gosta de coisas fofas.",
         "imagem": "https://s3.amazonaws.com/blog.dentrodahistoria.com.br/wp-content/uploads/2025/08/18180656/Kuromi.png",
-        "link": "https://www.sanrio.com.br/kuromi"
+        "link": "https://www.sanrio.com.br/"
     },
     {
         "nome": "Cinnamoroll",
         "aniversario": "6 de Março",
         "descricao": "Um cachorrinho branco com orelhas longas que o permitem voar e um rabo como pão de canela.",
         "imagem": "https://s3.amazonaws.com/blog.dentrodahistoria.com.br/wp-content/uploads/2025/08/18182632/Cina.png",
-        "link": "https://www.sanrio.com.br/cinnamoroll"
+        "link": "https://www.sanrio.com.br/"
     },
     {
         "nome": "Pompompurin",
         "aniversario": "16 de Abril",
         "descricao": "Um golden retriever de bom coração que usa uma boina marrom e adora pudim de caramelo.",
         "imagem": "https://s3.amazonaws.com/blog.dentrodahistoria.com.br/wp-content/uploads/2025/08/18182443/Pompom.png",
-        "link": "https://www.sanrio.com.br/pompompurin"
+        "link": "https://www.sanrio.com.br/"
     },
     {
         "nome": "Badtz-Maru",
         "aniversario": "1 de Abril",
         "descricao": "Um pinguim travesso que sonha em ser o chefe de tudo e é conhecido por suas caretas.",
         "imagem": "https://s3.amazonaws.com/blog.dentrodahistoria.com.br/wp-content/uploads/2025/08/18181231/Badtz.png",
-        "link": "https://www.sanrio.com.br/badtz-maru"
+        "link": "https://www.sanrio.com.br/"
     }
 ]
