@@ -27,7 +27,7 @@ O objetivo foi praticar conceitos fundamentais de desenvolvimento Front-end, cri
 
 Você pode visualizar o projeto rodando online através do link abaixo:
 
-### 🔗 [Clique aqui para acessar a Base de Conhecimento Sanrio](COLOQUE_O_LINK_DO_SEU_GITHUB_PAGES_AQUI)
+### 🔗 [Clique aqui para acessar a Base de Conhecimento Sanrio](https://vitoriaabarbozaa.github.io/base-de-conhecimento-sanrio/)
 
 ---
 
