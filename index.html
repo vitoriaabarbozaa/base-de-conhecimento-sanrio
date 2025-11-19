@@ -9,110 +9,21 @@
 </head>
 <body>
     <header>
-        <h1>Base de Conhecimento</h1>
+        <h1 onclick="limparBusca()" style="cursor: pointer;">Base de Conhecimento</h1>
         <div>
             <input type="text" id="input-busca" placeholder="Digite o nome do personagem" onkeypress="checarEnter(event)">
             <button id="botao-busca" onclick="iniciarBusca()">Buscar</button>
+            <button id="botao-limpar" onclick="limparBusca()">Limpar</button>
         </div>
     </header>
 
     <main id="container-cards">
-        <article class="card-personagem" onclick="window.open('https://www.sanrio.com.br/', '_blank')">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <img src="https://s3.amazonaws.com/blog.dentrodahistoria.com.br/wp-content/uploads/2025/08/18180439/HK.png" alt="Hello Kitty">
-                </div>
-                <div class="flip-card-back">
-                    <div class="card-content">
-                        <h2>Hello Kitty</h2>
-                        <p><strong>Aniversário:</strong> 1 de Novembro</p>
-                        <p>Uma gata branca com um laço vermelho, conhecida por sua gentileza e amizade.</p>
-                        <span class="clique-aviso">Clique para saber mais</span>
-                    </div>
-                </div>
-            </div>
-        </article>
+        </main>
 
-        <article class="card-personagem" onclick="window.open('https://www.sanrio.com.br/', '_blank')">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <img src="https://s3.amazonaws.com/blog.dentrodahistoria.com.br/wp-content/uploads/2025/08/18180540/MyMelody.png" alt="My Melody">
-                </div>
-                <div class="flip-card-back">
-                    <div class="card-content">
-                        <h2>My Melody</h2>
-                        <p><strong>Aniversário:</strong> 18 de Janeiro</p>
-                        <p>Uma coelhinha honesta e de boa índole que usa um capuz rosa. Adora bolo de amêndoas.</p>
-                        <span class="clique-aviso">Clique para saber mais</span>
-                    </div>
-                </div>
-            </div>
-        </article>
-
-        <article class="card-personagem" onclick="window.open('https://www.sanrio.com.br/', '_blank')">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <img src="https://s3.amazonaws.com/blog.dentrodahistoria.com.br/wp-content/uploads/2025/08/18180656/Kuromi.png" alt="Kuromi">
-                </div>
-                <div class="flip-card-back">
-                    <div class="card-content">
-                        <h2>Kuromi</h2>
-                        <p><strong>Aniversário:</strong> 31 de Outubro</p>
-                        <p>A rival de My Melody, com aparência punk-rock, mas que secretamente gosta de coisas fofas.</p>
-                        <span class="clique-aviso">Clique para saber mais</span>
-                    </div>
-                </div>
-            </div>
-        </article>
-
-        <article class="card-personagem" onclick="window.open('https://www.sanrio.com.br/', '_blank')">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <img src="https://s3.amazonaws.com/blog.dentrodahistoria.com.br/wp-content/uploads/2025/08/18182632/Cina.png" alt="Cinnamoroll">
-                </div>
-                <div class="flip-card-back">
-                    <div class="card-content">
-                        <h2>Cinnamoroll</h2>
-                        <p><strong>Aniversário:</strong> 6 de Março</p>
-                        <p>Um cachorrinho branco com orelhas longas que o permitem voar e um rabo como pão de canela.</p>
-                        <span class="clique-aviso">Clique para saber mais</span>
-                    </div>
-                </div>
-            </div>
-        </article>
-
-        <article class="card-personagem" onclick="window.open('https://www.sanrio.com.br/', '_blank')">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <img src="https://s3.amazonaws.com/blog.dentrodahistoria.com.br/wp-content/uploads/2025/08/18182443/Pompom.png" alt="Pompompurin">
-                </div>
-                <div class="flip-card-back">
-                    <div class="card-content">
-                        <h2>Pompompurin</h2>
-                        <p><strong>Aniversário:</strong> 16 de Abril</p>
-                        <p>Um golden retriever de bom coração que usa uma boina marrom e adora pudim de caramelo.</p>
-                        <span class="clique-aviso">Clique para saber mais</span>
-                    </div>
-                </div>
-            </div>
-        </article>
-
-        <article class="card-personagem" onclick="window.open('https://www.sanrio.com.br/', '_blank')">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <img src="https://s3.amazonaws.com/blog.dentrodahistoria.com.br/wp-content/uploads/2025/08/18181231/Badtz.png" alt="Badtz-Maru">
-                </div>
-                <div class="flip-card-back">
-                    <div class="card-content">
-                        <h2>Badtz-Maru</h2>
-                        <p><strong>Aniversário:</strong> 1 de Abril</p>
-                        <p>Um pinguim travesso que sonha em ser o chefe de tudo e é conhecido por suas caretas.</p>
-                        <span class="clique-aviso">Clique para saber mais</span>
-                    </div>
-                </div>
-            </div>
-        </article>
-    </main>
+    <div id="mensagem-erro" class="msg-erro">
+        <p>Poxa! Não encontrei esse personagem... 😢</p>
+        <p>Tente buscar por outro nome!</p>
+    </div>
 
     <footer class="footer">
         <ul class="footer-links">
@@ -120,7 +31,7 @@
             <li><a href="https://www.linkedin.com/in/vit%C3%B3ria-barboza-042852350/">LinkedIn</a></li>
             <li><a href="https://www.instagram.com/vitoriaa.barboza/">Instagram</a></li>
         </ul>
-        <p class="creditos">Feito com 💗 por Vitoria Barboza</p>
+        <p class="creditos">Feito com 💖 por Vitoria Barboza</p>
     </footer>
 
     <script src="script.js"></script>
