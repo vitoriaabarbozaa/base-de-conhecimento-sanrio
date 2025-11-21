@@ -2,7 +2,7 @@
 
 > Um projeto interativo, dinâmico e fofo para explorar o universo dos personagens da Sanrio.
 
-![Badge Concluído](http://img.shields.io/static/v1?label=STATUS&message=CONCLUIDO&color=PINK&style=for-the-badge)
+![Badge Em Andamento](http://img.shields.io/static/v1?label=STATUS&message=EM%20ANDAMENTO&color=PINK&style=for-the-badge)
 ![Badge License](http://img.shields.io/static/v1?label=LICENSE&message=MIT&color=PINK&style=for-the-badge)
 
 ---
