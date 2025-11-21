@@ -1,6 +1,6 @@
 # 🎀 Base de Conhecimento Sanrio
 
-> Um projeto interativo e fofo para explorar o universo dos personagens da Sanrio.
+> Um projeto interativo, dinâmico e fofo para explorar o universo dos personagens da Sanrio.
 
 ![Badge Concluído](http://img.shields.io/static/v1?label=STATUS&message=CONCLUIDO&color=PINK&style=for-the-badge)
 ![Badge License](http://img.shields.io/static/v1?label=LICENSE&message=MIT&color=PINK&style=for-the-badge)
@@ -9,17 +9,20 @@
 
 ## 💻 Sobre o Projeto
 
-Este projeto é uma **Base de Conhecimento** desenvolvida para listar e detalhar informações sobre os personagens clássicos da Sanrio (como Hello Kitty, My Melody, Kuromi, etc.).
+Este projeto é uma **Base de Conhecimento Interativa** desenvolvida para listar e detalhar informações sobre os personagens clássicos da Sanrio (Hello Kitty, Kuromi, Keroppi, etc.).
 
-O objetivo foi praticar conceitos fundamentais de desenvolvimento Front-end, criando uma interface agradável, responsiva e interativa.
+O que começou como uma prática de HTML/CSS evoluiu para uma aplicação dinâmica, focada em lógica de programação JavaScript, manipulação do DOM e persistência de dados no navegador.
 
-### ✨ Funcionalidades
+### ✨ Funcionalidades Principais
 
-- **Cards Interativos:** Efeito de *Flip* (giro 3D) ao passar o mouse, revelando curiosidades sobre o personagem.
-- **Links Externos:** Ao clicar no card, o usuário é redirecionado para a página oficial do personagem.
-- **Barra de Busca:** Sistema de filtro em tempo real desenvolvido em JavaScript. Você digita o nome e apenas o personagem correspondente permanece na tela.
-- **Design Responsivo:** O layout se adapta perfeitamente a computadores, tablets e celulares.
-- **Identidade Visual:** Cores, fontes e ícones (favicon) personalizados no tema Sanrio.
+- **🌗 Alternador de Temas (Dark Mode):** Sistema de troca de temas entre **Hello Kitty (Claro/Rosa)** e **Kuromi (Escuro/Roxo)** utilizando variáveis CSS.
+- **❤️ Sistema de Favoritos:** O usuário pode favoritar personagens. Essa informação é salva no **localStorage** do navegador, ou seja, seus favoritos permanecem lá mesmo se fechar a página.
+- **🪟 Modais de Detalhes:** Ao clicar em um card, abre-se uma janela sobreposta (modal) com informações detalhadas, substituindo a navegação externa.
+- **🔍 Busca e Filtros:**
+  - Barra de pesquisa em tempo real por nome.
+  - Botão "Meus Favoritos" que filtra e exibe apenas os personagens curtidos.
+- **🎀 Easter Egg:** Digite a palavra mágica **"sanrio"** no teclado para ver uma chuva de laços na tela!
+- **🎨 UI/UX Personalizada:** Cursor temático, Favicon personalizado e animações suaves de entrada.
 
 ---
 
@@ -33,21 +36,25 @@ Você pode visualizar o projeto rodando online através do link abaixo:
 
 ## 🛠 Tecnologias Utilizadas
 
-O projeto foi desenvolvido utilizando as seguintes tecnologias:
+O projeto foi desenvolvido utilizando as seguintes tecnologias e conceitos:
 
-- **HTML5:** Estruturação semântica do conteúdo.
+- **HTML5:** Estruturação semântica.
 - **CSS3:**
-  - **Flexbox:** Para o layout fluido.
-  - **Transform & Transition:** Para as animações 3D dos cards.
-  - **Media Queries:** Para a responsividade mobile.
-  - **Variaveis CSS:** Para gerenciamento da paleta de cores.
-- **JavaScript (Vanilla):** Lógica de busca e manipulação do DOM para filtragem dos cards.
+  - **CSS Variables:** Para o gerenciamento dos temas Claro/Escuro.
+  - **Keyframes & Animations:** Para os efeitos de entrada e o Easter Egg.
+  - **Flexbox & Media Queries:** Layout totalmente responsivo.
+- **JavaScript (Vanilla):**
+  - **Manipulação de DOM:** Geração automática dos cards a partir de uma lista de objetos (Array).
+  - **LocalStorage:** Persistência de dados dos favoritos.
+  - **Event Listeners:** Lógica de busca, cliques e teclado (Easter Egg).
 
 ---
 
 ## 🎨 Layout
 
-O design foi pensado na estética **Kawaii/Pastel**, utilizando a fonte *Quicksand* e tons de rosa suave (`#FCE4EC`, `#F48FB1`).
+O design foi pensado na estética **Kawaii/Pastel**, utilizando a fonte *Quicksand*. A paleta de cores se adapta dinamicamente:
+- **Tema Hello Kitty:** `#FCE4EC` (Rosa Claro) & `#F48FB1` (Rosa Choque).
+- **Tema Kuromi:** `#2D1B36` (Roxo Escuro) & `#D486F5` (Lilás Neon).
 
 ---
 
