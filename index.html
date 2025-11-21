@@ -14,6 +14,8 @@
             <input type="text" id="input-busca" placeholder="Digite o nome do personagem" onkeypress="checarEnter(event)">
             <button id="botao-busca" onclick="iniciarBusca()">Buscar</button>
             <button id="botao-limpar" onclick="limparBusca()">Limpar</button>
+            <button id="botao-favoritos" onclick="filtrarFavoritos()">Favoritos ❤️</button>
+            <button id="btn-tema" onclick="alternarTema()" style="margin-bottom: 1rem; font-size: 1.5rem; background: transparent; border: none; cursor: pointer;"> 🖤</button>
         </div>
     </header>
 
@@ -24,6 +26,21 @@
         <p>Poxa! Não encontrei esse personagem... 😢</p>
         <p>Tente buscar por outro nome!</p>
     </div>
+
+    <div id="modal" class="modal-container" onclick="fecharModal(event)">
+    <div class="modal-content">
+        <span class="fechar" onclick="fecharModal(event)">&times;</span>
+        <button id="btn-fav-modal" class="btn-fav-modal">🤍</button>
+        <div class="modal-corpo">
+            <img id="modal-img" src="" alt="">
+            <div class="modal-textos">
+                <h2 id="modal-titulo">Nome</h2>
+                <p id="modal-desc">Descrição completa aqui.</p>
+                <a id="modal-link" href="#" target="_blank">Ver página oficial</a>
+            </div>
+        </div>
+    </div>
+</div>
 
     <footer class="footer">
         <ul class="footer-links">

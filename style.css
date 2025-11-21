@@ -1,9 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 
+/* =========================================
+   1. RESET E VARIÁVEIS
+   ========================================= */
 * {
     box-sizing: border-box;
 }
 
+/* Tema Padrão (Hello Kitty) */
 :root {
     --bg-color: #FCE4EC;
     --card-bg-color: #FFFFFF;
@@ -12,7 +16,38 @@
     --accent-color: #F48FB1;
 }
 
-/* --- HEADER --- */
+/* Tema Escuro (Kuromi) */
+body.kuromi-theme {
+    --bg-color: #2D1B36;
+    --card-bg-color: #1A1A1A;
+    --primary-text-color: #E0E0E0;
+    --secondary-text-color: #B0B0B0;
+    --accent-color: #D486F5;
+}
+
+/* Ajuste para a borda traseira do card no tema escuro */
+body.kuromi-theme .flip-card-back {
+    border-color: #4A2F5E;
+}
+
+/* =========================================
+   2. CONFIGURAÇÕES GERAIS E CURSOR
+   ========================================= */
+body {
+    margin: 0;
+    background: var(--bg-color);
+    color: var(--primary-text-color);
+    font-family: "Quicksand", sans-serif;
+    cursor: url('https://cur.cursors-4u.net/anime/ani-12/ani1135.png'), auto;
+}
+
+a, button, article {
+    cursor: url('https://cur.cursors-4u.net/anime/ani-12/ani1135.png'), pointer;
+}
+
+/* =========================================
+   3. HEADER E INPUTS
+   ========================================= */
 header {
     padding: 1.5rem 1rem;
     display: flex;
@@ -53,6 +88,11 @@ div input:focus {
     box-shadow: 0 0 0 2px rgba(244, 143, 177, 0.3);
 }
 
+/* =========================================
+   4. BOTÕES (BUSCA, LIMPAR, FAVORITOS)
+   ========================================= */
+   
+/* Botão Buscar */
 #botao-busca {
     padding: 0.5rem 1.5rem;
     border-radius: 2rem;
@@ -74,6 +114,7 @@ div input:focus {
     transform: scale(0.95);
 }
 
+/* Botão Limpar */
 #botao-limpar {
     padding: 0.5rem 1.5rem;
     border-radius: 2rem;
@@ -81,9 +122,7 @@ div input:focus {
     font-family: inherit;
     font-weight: 600;
     font-size: 1rem;
-    margin-left: 10px; /* Espacinho entre os botões */
-    
-    /* Estilo "Vazado" (Borda rosa, fundo transparente) */
+    margin-left: 10px;
     background-color: transparent;
     border: 2px solid var(--accent-color);
     color: var(--accent-color);
@@ -92,22 +131,46 @@ div input:focus {
 
 #botao-limpar:hover {
     background-color: var(--accent-color);
-    color: white; /* Inverte as cores ao passar o mouse */
+    color: white;
 }
 
-body {
-    margin: 0;
-    background: var(--bg-color);
-    color: var(--primary-text-color);
-    font-family: "Quicksand", sans-serif;
-    cursor: url('https://cur.cursors-4u.net/anime/ani-12/ani1135.png'), auto;
+/* Botão Favoritos (No Header) */
+#botao-favoritos {
+    padding: 0.5rem 1.5rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 1rem;
+    margin-left: 10px;
+    
+    background-color: #FCE4EC;
+    border: 2px solid #F48FB1;
+    color: #F48FB1;
+    transition: all 0.2s ease;
 }
 
-a, button, article {
-    cursor: url('https://cur.cursors-4u.net/anime/ani-12/ani1135.png'), pointer;
+#botao-favoritos:hover {
+    background-color: #F48FB1;
+    color: white;
 }
 
-/* --- MAIN & CARDS --- */
+/* --- AJUSTE DO BOTÃO FAVORITOS NO MODO KUROMI --- */
+body.kuromi-theme #botao-favoritos {
+    background-color: transparent;
+    border-color: var(--accent-color); /* Lilás neon */
+    color: var(--accent-color);
+}
+
+body.kuromi-theme #botao-favoritos:hover {
+    background-color: var(--accent-color);
+    color: var(--bg-color); /* Texto escuro para contraste */
+    box-shadow: 0 0 10px var(--accent-color); /* Brilho neon */
+}
+
+/* =========================================
+   5. MAIN E CARDS
+   ========================================= */
 main {
     display: flex;
     flex-wrap: wrap;
@@ -119,25 +182,12 @@ main {
     min-height: 60vh;
 }
 
-/* Animação de entrada */
-@keyframes subirSuave {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 article {
     background-color: transparent;
     width: 516px; 
     height: 501px;
     max-width: 100%;
     perspective: 1000px;
-    /* Aplica a animação na entrada */
     animation: subirSuave 0.8s ease-out;
 }
 
@@ -212,7 +262,7 @@ article p {
     letter-spacing: 1px;
 }
 
-/* --- MENSAGEM DE ERRO --- */
+/* Mensagem de Erro */
 .msg-erro {
     display: none;
     text-align: center;
@@ -225,7 +275,126 @@ article p {
     color: var(--secondary-text-color);
 }
 
-/* --- FOOTER --- */
+/* =========================================
+   6. MODAL
+   ========================================= */
+/* Fundo escuro atrás do modal */
+.modal-container {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    align-items: center;
+}
+
+/* A caixinha do modal */
+.modal-content {
+    background-color: var(--card-bg-color);
+    padding: 2rem;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    border: 2px solid var(--accent-color);
+    animation: subirSuave 0.3s ease;
+}
+
+.modal-corpo {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.modal-corpo img {
+    width: 150px;
+    border-radius: 10px;
+}
+
+.modal-textos h2 {
+    color: var(--accent-color);
+    margin-top: 0;
+}
+
+/* Botão de fechar (X) */
+.fechar {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--secondary-text-color);
+    cursor: pointer;
+}
+
+.fechar:hover {
+    color: var(--accent-color);
+}
+
+/* Botão de Favorito DENTRO do Modal */
+.btn-fav-modal {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: transform 0.2s;
+    z-index: 10;
+}
+
+.btn-fav-modal:hover {
+    transform: scale(1.2);
+}
+
+/* =========================================
+   7. ANIMAÇÕES
+   ========================================= */
+/* Animação de entrada dos cards */
+@keyframes subirSuave {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animação da Chuva de Laços */
+.chuva-laco {
+    position: fixed;
+    top: -50px;
+    font-size: 2rem;
+    z-index: 9999;
+    pointer-events: none;
+    animation: cair 3s linear forwards;
+}
+
+@keyframes cair {
+    0% {
+        top: -50px;
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        top: 110vh;
+        transform: rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* =========================================
+   8. FOOTER E RESPONSIVIDADE
+   ========================================= */
 .footer {
     width: 100%;
     background-color: rgba(255, 255, 255, 0.5);
@@ -263,7 +432,6 @@ article p {
     font-weight: 500;
 }
 
-/* --- RESPONSIVIDADE --- */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
@@ -275,5 +443,12 @@ article p {
     }
     article h2 {
         font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .modal-corpo {
+        flex-direction: column;
+        text-align: center;
     }
 }
